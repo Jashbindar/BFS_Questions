@@ -21,6 +21,7 @@ def bfs_queue (start, end, word_list):
             if word not in visited:
                 # diff is used because the algorithm will instantly take the first letter with difference
                 # since 'cog' has 3 different letters, it will skip the other words and convert 'hit' to 'cog' immediately
+                # it does that because the words aren't set as parent of each other properly
                 diff = 0 # check the letter difference
                 for i in range(len(word)):
                     if curr_word[i] != word[i]:
