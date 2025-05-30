@@ -37,4 +37,10 @@ def bfs_queue(start, end, arg_graph):
 
 start = 'A'
 end = 'G'
-print(bfs_queue(start, end, graph))
+path_created = bfs_queue(start, end, graph)
+
+if path_created is None:
+    print("Path not found.")
+else:
+    print(f"{start} -> ", end="")
+    print(" -> " .join(path_created))
